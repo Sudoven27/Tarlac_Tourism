@@ -36,6 +36,8 @@ app.use('/api/visitors', require('./routes/visitors'));
 app.use('/api/images', require('./routes/images'));
 app.use('/api/excel', require('./routes/excel'));
 
+// Health check routes
+app.get('/', (req, res) => res.json({ status: 'OK', message: 'Tarlac Tourism API running' }));
 app.get('/api/health', (req, res) => res.json({ status: 'OK', message: 'Tarlac Tourism API running' }));
 
 const connectDB = async () => {
