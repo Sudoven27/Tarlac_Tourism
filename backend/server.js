@@ -15,6 +15,7 @@ if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir, { recursive: true });
 const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:5173',
+  'https://tarlac-tourism-eight.vercel.app',
   process.env.FRONTEND_URL || 'http://localhost:3000'
 ];
 
