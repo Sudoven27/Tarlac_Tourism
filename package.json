@@ -1,0 +1,23 @@
+{
+  "name": "tarlac-tourism-system",
+  "version": "1.0.0",
+  "description": "Tarlac Tourism Inventory Supply Data Management System",
+  "private": true,
+  "scripts": {
+    "install": "npm run install:backend && npm run install:frontend",
+    "postinstall": "npm run install:backend && npm run install:frontend",
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "dev": "concurrently --kill-others-on-fail --prefix-colors \"green,cyan\" --names \"SERVER,CLIENT\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "start": "concurrently --kill-others-on-fail --prefix-colors \"green,cyan\" --names \"SERVER,CLIENT\" \"npm run start:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "start:backend": "cd backend && npm start",
+    "build": "cd frontend && npm run build",
+    "seed": "cd backend && npm run seed",
+    "seed:clear": "cd backend && npm run seed:clear"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
